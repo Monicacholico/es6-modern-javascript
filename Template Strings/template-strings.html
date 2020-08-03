@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+  <style>
+      .h1 {
+          background: yellow;
+      }
+  </style>
+</head>
+<body>
+
+<script>
+
+    function highlight(strings, ...values) {
+        let str = '';
+        strings.forEach((string, i) => {
+            str += string + (values[i] || '');
+            str += `${string} <span contenteditable class="h1">${values[1] || ''}</span>`;
+        });
+        return str;
+    }
+
+  const name = 'Snickers'; 
+  const age = 2;
+  const sentence = highlight`My dog ${name} and is 
+  ${age * 7} years old.`;
+  document.body.innerHTML = sentence;
+  console.log(sentence);
+
+
+
+</script>
+</body>
+</html>
