@@ -23,12 +23,15 @@
   };
 
   function addAbreviations(strings, ...values) {
-      const abbrevitated = values.map(value => {
+      const abbreviated = values.map(value => {
           if(dict[value]){
-              return `<abbr title="${dict[value]}"${value}</abbr>`
+              return `<abbr title="${dict[value]}">${value}</abbr>`
           }
           return value;
       })
+      return strings.reduce((sentence, string, i) => {
+          return `${sentence}${string}${abbreviated[i] || ''}`;
+      }, '');
   }
 
   const first = 'Wes';
