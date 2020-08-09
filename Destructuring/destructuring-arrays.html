@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring Arrays</title>
+</head>
+<body>
+<script>
+  const details = ['Wes Bos', 123, 'wesbos.com'];
+  
+//   const name = details[0];
+//   const id = details[1];
+
+const [name, id, website] = details;
+
+console.log(name, id, website);
+
+const data = 'Basketball, Sports, 90210, 23';
+
+const [itemName, category, sku, inventory] = data.split(',');
+
+data.split(',');
+console.log(data);
+
+
+</script>
+</body>
+</html>
