@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The ...Spread Operator</title>
+</head>
+
+<body>
+    <script>
+
+        const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
+        const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
+
+        //   const pizzas = featured.concat(specialty);
+        //   console.log(pizzas);  
+
+        // let pizzas = [];
+        // pizzas = pizzas.concat(featured);
+        // pizzas.push('veg');
+        // pizzas = pizzas.concat(specialty);
+        // console.log(pizzas);
+
+        ['wes'];
+        let name = ['wes'];
+        name = [...'wes'];
+        console.log(name);
+
+        let pizzas = [];
+        pizzas = [...featured, 'veg', ...specialty]
+        console.log(pizzas);
+
+        // How do you usually copy an array?
+
+        // Doesn't really copy, but reference the 
+        //original array and now original pizzas changes too.
+        // fridayPizzas = pizzas 
+        // fridayPizzas[0] = 'cobbler pie';
+        // console.log(fridayPizzas);
+        // console.log(pizzas);
+
+        // Another way 
+        // fridayPizzas = [].concat(pizzas);
+        // fridayPizzas.push('goat cheese');
+        // console.log(fridayPizzas);
+        // console.log(pizzas);
+
+
+        const fridayPizzas = [...pizzas];
+
+        fridayPizzas[0] = 'apple pie';
+        console.log(fridayPizzas);
+        console.log(pizzas);
+
+        
+        const deepDish = {
+            pizzaName: 'Deep Dish',
+            size: 'Medium',
+            ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+        };
+
+    </script>
+</body>
+
+</html>
