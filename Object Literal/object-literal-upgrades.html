@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p1>'hello there'</p1>
+    <p2>'hello there'</p2>
+    <p3>'hello there'</p3>
+    <p4>'hello there'</p4>
+    <p5>'hello there'</p5>
+    <p6>'hello there'</p6>
+    <p7>'hello there'</p7>
+    <p8>'hello there'</p8>
+    <p9>'hello there'</p9>
+    <p10>'hello there'</p10>
+
+    <script>
+        const first = 'snickers';
+        const last = 'bos';
+        const age = 2;
+        const breed = 'King Charles Cav';
+        const dog = {
+            firstName : first,
+            last,
+            age,
+            breed,
+            pals: ['Hugo', 'Sunny']
+        }
+        console.log(dog);
+
+
+        const modal = {
+            create(){},
+
+            open() {},
+            
+            close() {}
+        }
+
+
+        function invertColor(color) {
+            return '#' + ('000000' + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+        }
+
+        const key = 'pocketColor';
+
+        const value = '#ffc600';
+
+        // Way to add dynamic value-properties to object
+
+        //Old Method
+
+        // const tShirt = {};
+
+        // tShirt[key] = value,
+        // tShirt[`${key}Opposite`] = invertColor(value)
+        
+        // console.log(tShirt);
+
+
+        // New Way to do it, inside the object
+
+        const tShirt = {
+            [key]: value,
+            [`${key}Opposite`]: invertColor(value)
+        };
+
+        console.log(tShirt);
+
+
+        const keys = ['size', 'color', 'weight'];
+        const values = ['medium', 'red', 100];
+
+        const shirt = {
+            [keys.shift()]: values.shift(),
+            [keys.shift()]: values.shift(),
+            [keys.shift()]: values.shift(),
+        }
+
+        console.log(shirt);
+
+    </script>
+</body>
+</html>

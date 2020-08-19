@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Spread Examples</title>
+    <meta charset="UTF-8">
+    <title>Spread Examples</title>
 </head>
+
 <body>
-<script>
-  const inventors = ['Einstein', 'Newton', 'Galileo'];
-  const newInventors = ['Musk', 'Jobs'];
-  inventors.push(...newInventors);
-  console.log(inventors);
+    <script>
 
-  const name = ['Wes', 'Bos'];
+        // How to do just one Array from 2 arrays
+        const inventors = ['Einstein', 'Newton', 'Galileo'];
+        const newInventors = ['Musk', 'Jobs'];
 
-  function sayHi(first, last) {
-    alert(`Hey there ${first} ${last}`);
-  }
+        // With Apply
+        // inventors.push.apply(inventors, newInventors);
 
-  sayHi(...name);
+        // With Spread Operator
+        inventors.push(...newInventors);
+        console.log(inventors);
 
-</script>
+        const name = ['mO', 'Lo'];
+
+        function sayHi (first, last) {
+            alert(`Hey there ${first} ${last}`);
+        }
+
+        // One way to pass the arguments
+        // sayHi(name[0], name[1]);
+        sayHi(...name);
+
+
+
+    </script>
 </body>
+
 </html>
