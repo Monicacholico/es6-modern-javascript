@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promises!</title>
+</head>
+<body>
+<script>
+
+// const postPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+
+// postPromise.then(data => {
+//     return data.json()
+//     .then(data => {
+//         console.log(data)
+//     })
+//     .catch((err) => {
+//         console.error(err)
+//     });
+    
+// });
+
+const url = 'http://wesbos.com/wp-json/wp/v2/posts'
+function sendingPosts(method, url, data) {
+    const promise = new Promise((response, reject) => {
+        
+        // fetch('https://wesbos.com/wp-json/wp/v2/posts')
+
+
+    });
+    return fetch(url).then(response => {
+        return response.json();
+        console.log(response.json());
+    });
+}
+
+</script>
+</body>
+</html>
