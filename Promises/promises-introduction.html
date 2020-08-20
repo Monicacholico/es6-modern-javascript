@@ -7,32 +7,32 @@
 <body>
 <script>
 
-// const postPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+const postPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
 
-// postPromise.then(data => {
-//     return data.json()
-//     .then(data => {
-//         console.log(data)
-//     })
-//     .catch((err) => {
-//         console.error(err)
-//     });
+postPromise.then(data => {
+    return data.json()
+    .then(data => {
+        console.log(data)
+    })
+    .catch((err) => {
+        console.error(err)
+    });
     
-// });
+});
 
-const url = 'http://wesbos.com/wp-json/wp/v2/posts'
-function sendingPosts(method, url, data) {
-    const promise = new Promise((response, reject) => {
+// function sendingPosts(method, url, data) {
+//     const promise = new Promise((response, reject) => {
+//         // const url = 'http://wesbos.com/wp-json/wp/v2/posts'
         
-        // fetch('https://wesbos.com/wp-json/wp/v2/posts')
+//         // fetch('https://wesbos.com/wp-json/wp/v2/posts')
 
 
-    });
-    return fetch(url).then(response => {
-        return response.json();
-        console.log(response.json());
-    });
-}
+//     });
+//     return fetch(url).then(response => {
+//         return response.json();
+//         console.log(response.json());
+//     });
+// }
 
 </script>
 </body>
