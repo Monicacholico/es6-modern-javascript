@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System</title>
+</head>
+<body>
+    
+    <script src="https://jspm.io/system@0.19.js"></script>
+    <script>
+        System.config({ transpiler: 'babel'});
+        System.import('./main.js');
+        System.import('./checkout.js');
+    </script>
+
+    <!-- <script>System.import('./checkout.js')</script> -->
+</body>
+</html>
