@@ -8,9 +8,9 @@ import { apiKey as key, url, sayHi, old, dog } from './src/config.js';
 
 // sayHi('Monica');
 
-// const ages = [1,1,4, 52, 12, 4];
+const ages = [1,1,4, 52, 12, 4];
 
-// console.log(uniq(ages));
+console.log(uniq(ages));
 
 import User, { createURL, gravatar} from './src/user';
 

@@ -113,9 +113,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // sayHi('Monica');
 
-// const ages = [1,1,4, 52, 12, 4];
+var ages = [1, 1, 4, 52, 12, 4];
 
-// console.log(uniq(ages));
+console.log(Object(lodash__WEBPACK_IMPORTED_MODULE_0__["uniq"])(ages));
 
 
 
